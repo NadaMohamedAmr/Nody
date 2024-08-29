@@ -1,0 +1,24 @@
+/* Hover effect for all nav links */
+.nav-link:hover {
+  background-color: #f8f9fa;
+  color: #047dff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active link (optional to differentiate from hover) */
+.nav-link.active {
+  background-color: #1779e1;
+  color: white; }
+/* Hover effect for all nav links */
+.nav-link:hover {
+  background-color: #f8f9fa;
+  color: #047dff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active link (optional to differentiate from hover) */
+.nav-link.active {
+  background-color: #1779e1;
+  color: white; }

@@ -1,0 +1,47 @@
+<div class="container">
+  <h1 [ngClass]="classPageTitle">Product list</h1>
+  <h2 [ngStyle]="classStyle">Our products</h2>
+
+  <div class="row">
+
+    @for (product of products; track product.id){
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+<div class="card" style="width:400px">
+  <img class="card-img-top" [src]="product.photo" alt="Card image">
+  <div class="card-body">
+  <h4 class="card-title">
+    <a routerLink="/product/{{product.id}}">
+    {{product.title}}
+  </a>
+  </h4>
+    <p class="card-text">{{product.price}} EGP</p>
+    <b class="">@switch (product.color) {
+    @case ("black") {
+      <span class = "">Black</span>
+    }
+    @case ("Green") {
+      <span class="text-success">Green</span>
+    }
+      @case ("pink") {
+      <span class="text-danger">Pink</span>
+    }
+
+    @case ("light pink") {
+      <span class="text-danger">light Pink</span>
+    }
+    @case ("begin") {
+      <span class="text-light-emphasis">Begin</span>
+    }
+
+      }
+     </b>
+    <br>
+    <p class="card-text">Discount:{{product.discount}}%</p>
+
+    <button href="#" class="btn btn-primary" (click)="addCartItem(product)" routerLink="/cart">Add to cart</button>
+  </div>
+</div>
+</div>
+}
+</div>
+</div>
